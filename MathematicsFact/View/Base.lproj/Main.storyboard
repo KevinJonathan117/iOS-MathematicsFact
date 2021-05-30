@@ -16,24 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-P6-zSK">
-                                <rect key="frame" x="163" y="437.5" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-fe-RJc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pMH-P6-zSK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E84-LC-H1Q"/>
-                            <constraint firstItem="pMH-P6-zSK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xMR-l4-Bny"/>
+                            <constraint firstItem="CF4-fe-RJc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BXx-bU-Wwh"/>
+                            <constraint firstAttribute="bottom" secondItem="CF4-fe-RJc" secondAttribute="bottom" id="Ee1-6U-HEs"/>
+                            <constraint firstItem="CF4-fe-RJc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="URg-dC-j8E"/>
+                            <constraint firstItem="CF4-fe-RJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zvZ-Lm-xV2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mathematicsTableView" destination="CF4-fe-RJc" id="UX3-lH-tbt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
     <resources>
