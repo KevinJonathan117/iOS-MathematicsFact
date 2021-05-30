@@ -13,8 +13,6 @@
 		5D8BE620266363610011F445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D8BE61E266363610011F445 /* Main.storyboard */; };
 		5D8BE622266363630011F445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D8BE621266363630011F445 /* Assets.xcassets */; };
 		5D8BE625266363630011F445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D8BE623266363630011F445 /* LaunchScreen.storyboard */; };
-		5D8BE632266366AB0011F445 /* MathematicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BE630266366AB0011F445 /* MathematicsTableViewCell.swift */; };
-		5D8BE633266366AB0011F445 /* MathematicsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8BE631266366AB0011F445 /* MathematicsTableViewCell.xib */; };
 		5D8BE63526636A330011F445 /* MathematicsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BE63426636A330011F445 /* MathematicsType.swift */; };
 		5D8BE63726636A430011F445 /* MathematicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BE63626636A430011F445 /* MathematicsData.swift */; };
 		5D8BE6392663799C0011F445 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BE6382663799C0011F445 /* DetailViewController.swift */; };
@@ -29,8 +27,6 @@
 		5D8BE621266363630011F445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D8BE624266363630011F445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D8BE626266363630011F445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D8BE630266366AB0011F445 /* MathematicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathematicsTableViewCell.swift; sourceTree = "<group>"; };
-		5D8BE631266366AB0011F445 /* MathematicsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MathematicsTableViewCell.xib; sourceTree = "<group>"; };
 		5D8BE63426636A330011F445 /* MathematicsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathematicsType.swift; sourceTree = "<group>"; };
 		5D8BE63626636A430011F445 /* MathematicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathematicsData.swift; sourceTree = "<group>"; };
 		5D8BE6382663799C0011F445 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				5D8BE61C266363610011F445 /* ViewController.swift */,
-				5D8BE630266366AB0011F445 /* MathematicsTableViewCell.swift */,
 				5D8BE6382663799C0011F445 /* DetailViewController.swift */,
 			);
 			path = Controller;
@@ -107,7 +102,6 @@
 		5D8BE62F2663643B0011F445 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5D8BE631266366AB0011F445 /* MathematicsTableViewCell.xib */,
 				5D8BE623266363630011F445 /* LaunchScreen.storyboard */,
 				5D8BE61E266363610011F445 /* Main.storyboard */,
 			);
@@ -171,7 +165,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D8BE633266366AB0011F445 /* MathematicsTableViewCell.xib in Resources */,
 				5D8BE625266363630011F445 /* LaunchScreen.storyboard in Resources */,
 				5D8BE622266363630011F445 /* Assets.xcassets in Resources */,
 				5D8BE620266363610011F445 /* Main.storyboard in Resources */,
@@ -186,7 +179,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D8BE63526636A330011F445 /* MathematicsType.swift in Sources */,
-				5D8BE632266366AB0011F445 /* MathematicsTableViewCell.swift in Sources */,
 				5D8BE63726636A430011F445 /* MathematicsData.swift in Sources */,
 				5D8BE61D266363610011F445 /* ViewController.swift in Sources */,
 				5D8BE619266363610011F445 /* AppDelegate.swift in Sources */,

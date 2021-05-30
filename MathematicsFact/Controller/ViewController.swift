@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var mathematicsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //mathematicsTableView.register(UINib(nibName: "MathematicsTableViewCell", bundle: nil), forCellReuseIdentifier: "mathematicsCell")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,11 +44,6 @@ extension ViewController: UITableViewDataSource {
         cell.imageView!.image = mathematicType.photo
         cell.imageView!.clipsToBounds = true
         cell.imageView!.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
-            //cell.titleMathematics.text = mathematicType.name
-            //cell.photoMathematics.image = mathematicType.photo
-            
-            //cell.photoMathematics.layer.cornerRadius = cell.photoMathematics.frame.height / 3
-            //cell.photoMathematics.clipsToBounds = true
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,14 +53,11 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let detail = DetailViewController()
         tempName = mathematicsTypes[indexPath.row].name
         tempPhoto = mathematicsTypes[indexPath.row].photo
         tempDesc = mathematicsTypes[indexPath.row].description
         
-        //detail.mathematicsType = mathematicsTypes[indexPath.row]
         performSegue(withIdentifier: "toDetail", sender: self)
-        //self.navigationController?.pushViewController(detail, animated: true)
     }
 }
 
