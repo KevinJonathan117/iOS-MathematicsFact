@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var mathematicsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //mathematicsTableView.register(UINib(nibName: "MathematicsTableViewCell", bundle: nil), forCellReuseIdentifier: "mathematicsCell")
     }
 
@@ -36,25 +35,26 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UITableViewCell {
-            let mathematicType = mathematicsTypes[indexPath.row]
-            cell.textLabel!.text = mathematicType.name
-            
-            cell.imageView!.image = mathematicType.photo
-            cell.imageView!.layer.cornerRadius = cell.imageView!.frame.height / 3
-            cell.imageView!.clipsToBounds = true
-            cell.imageView!.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let mathematicType = mathematicsTypes[indexPath.row]
+        
+        cell.textLabel!.text = mathematicType.name
+        cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 20.0)
+        cell.textLabel!.numberOfLines = 0
+        
+        cell.imageView!.image = mathematicType.photo
+        cell.imageView!.clipsToBounds = true
+        cell.imageView!.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
             //cell.titleMathematics.text = mathematicType.name
             //cell.photoMathematics.image = mathematicType.photo
             
             //cell.photoMathematics.layer.cornerRadius = cell.photoMathematics.frame.height / 3
             //cell.photoMathematics.clipsToBounds = true
-            return cell
-        } else {
-            return UITableViewCell()
-        }
+        return cell
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
 }
 
 extension ViewController: UITableViewDelegate {
