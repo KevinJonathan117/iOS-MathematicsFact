@@ -8,15 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var tempName : String = ""
+    var tempPhoto : UIImage = UIImage(named: "algebra")!
+    var tempDesc : String = ""
 
     @IBOutlet weak var mathematicsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mathematicsTableView.dataSource = self
-        mathematicsTableView.register(UINib(nibName: "MathematicsTableViewCell", bundle: nil), forCellReuseIdentifier: "mathematicsCell")
+        //mathematicsTableView.register(UINib(nibName: "MathematicsTableViewCell", bundle: nil), forCellReuseIdentifier: "mathematicsCell")
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DetailViewController {
+            vc.name = tempName
+            vc.desc = tempDesc
+            vc.photo = tempPhoto
+        }
+    }
 
 }
 
@@ -26,18 +36,37 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "mathematicsCell", for: indexPath) as? MathematicsTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UITableViewCell {
             let mathematicType = mathematicsTypes[indexPath.row]
-            cell.titleMathematics.text = mathematicType.name
-            cell.photoMathematics.image = mathematicType.photo
+            cell.textLabel!.text = mathematicType.name
             
-            cell.photoMathematics.layer.cornerRadius = cell.photoMathematics.frame.height / 3
-            cell.photoMathematics.clipsToBounds = true
+            cell.imageView!.image = mathematicType.photo
+            cell.imageView!.layer.cornerRadius = cell.imageView!.frame.height / 3
+            cell.imageView!.clipsToBounds = true
+            cell.imageView!.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
+            //cell.titleMathematics.text = mathematicType.name
+            //cell.photoMathematics.image = mathematicType.photo
+            
+            //cell.photoMathematics.layer.cornerRadius = cell.photoMathematics.frame.height / 3
+            //cell.photoMathematics.clipsToBounds = true
             return cell
         } else {
             return UITableViewCell()
         }
     }
     
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let detail = DetailViewController()
+        tempName = mathematicsTypes[indexPath.row].name
+        tempPhoto = mathematicsTypes[indexPath.row].photo
+        tempDesc = mathematicsTypes[indexPath.row].description
+        
+        //detail.mathematicsType = mathematicsTypes[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: self)
+        //self.navigationController?.pushViewController(detail, animated: true)
+    }
 }
 
