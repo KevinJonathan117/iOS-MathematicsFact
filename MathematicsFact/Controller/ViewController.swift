@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var tempName : String = ""
     var tempPhoto : UIImage = UIImage(named: "algebra")!
     var tempDesc : String = ""
+    
+    let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
 
     override func viewDidLoad() {
         super.viewDidLoad()
