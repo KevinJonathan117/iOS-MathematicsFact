@@ -23,5 +23,6 @@ class DetailViewController: ViewController {
         nameType.text = name
         photoType.image = photo
         descType.text = desc
+        
     }
 }

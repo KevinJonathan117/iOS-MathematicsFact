@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var mathematicsTableView: UITableView!
     var tempName : String = ""
     var tempPhoto : UIImage = UIImage(named: "algebra")!
     var tempDesc : String = ""
 
-    @IBOutlet weak var mathematicsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,7 +25,6 @@ class ViewController: UIViewController {
             vc.photo = tempPhoto
         }
     }
-
 }
 
 extension ViewController: UITableViewDataSource {

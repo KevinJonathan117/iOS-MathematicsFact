@@ -65,7 +65,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mathematicsTableView" destination="CF4-fe-RJc" id="UX3-lH-tbt"/>
+                        <outlet property="mathematicsTableView" destination="CF4-fe-RJc" id="gbl-PY-ixY"/>
                         <segue destination="uxn-EN-e9O" kind="show" identifier="toDetail" id="814-5N-keV"/>
                     </connections>
                 </viewController>
@@ -76,18 +76,61 @@
         <!--Profile-->
         <scene sceneID="sOv-bx-xFf">
             <objects>
-                <viewController id="mG9-4j-fGz" sceneMemberID="viewController">
+                <viewController id="mG9-4j-fGz" customClass="ProfileViewController" customModule="MathematicsFact" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="med-N2-1x2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kevin Jonathan" translatesAutoresizingMaskIntoConstraints="NO" id="H9c-IX-FHY">
+                                <rect key="frame" x="79" y="204" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="Jip-rg-X0l"/>
+                                    <constraint firstAttribute="height" constant="256" id="fWE-jv-hcu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kevin Jonathan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gr-UW-u5p">
+                                <rect key="frame" x="20" y="500" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kevinjonathan3010@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heO-ae-LI7">
+                                <rect key="frame" x="20" y="534" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;A Student Who Loves Mathematics&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG2-ZK-kNj">
+                                <rect key="frame" x="20" y="575" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aam-tg-aQq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aam-tg-aQq" firstAttribute="trailing" secondItem="4gr-UW-u5p" secondAttribute="trailing" constant="20" id="8D5-4w-EBR"/>
+                            <constraint firstItem="heO-ae-LI7" firstAttribute="top" secondItem="4gr-UW-u5p" secondAttribute="bottom" constant="10" id="9Sb-1f-f98"/>
+                            <constraint firstItem="H9c-IX-FHY" firstAttribute="top" secondItem="aam-tg-aQq" secondAttribute="top" constant="64" id="bPR-X7-3ZY"/>
+                            <constraint firstItem="4gr-UW-u5p" firstAttribute="top" secondItem="H9c-IX-FHY" secondAttribute="bottom" constant="40" id="grK-xU-40T"/>
+                            <constraint firstItem="heO-ae-LI7" firstAttribute="leading" secondItem="aam-tg-aQq" secondAttribute="leading" constant="20" id="qNT-X7-G5R"/>
+                            <constraint firstItem="aam-tg-aQq" firstAttribute="trailing" secondItem="aG2-ZK-kNj" secondAttribute="trailing" constant="20" id="qn4-dK-oAi"/>
+                            <constraint firstItem="aG2-ZK-kNj" firstAttribute="top" secondItem="heO-ae-LI7" secondAttribute="bottom" constant="20" id="sFm-0h-P5P"/>
+                            <constraint firstItem="H9c-IX-FHY" firstAttribute="centerX" secondItem="med-N2-1x2" secondAttribute="centerX" id="tJQ-vw-EB8"/>
+                            <constraint firstItem="aG2-ZK-kNj" firstAttribute="leading" secondItem="aam-tg-aQq" secondAttribute="leading" constant="20" id="vzR-AL-SVC"/>
+                            <constraint firstItem="4gr-UW-u5p" firstAttribute="leading" secondItem="aam-tg-aQq" secondAttribute="leading" constant="20" id="xwc-Kq-PlF"/>
+                            <constraint firstItem="aam-tg-aQq" firstAttribute="trailing" secondItem="heO-ae-LI7" secondAttribute="trailing" constant="20" id="zAc-oq-Ro5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="8oK-UC-KH9"/>
+                    <connections>
+                        <outlet property="profileImage" destination="H9c-IX-FHY" id="GW6-Df-Tvo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-cD-FMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909" y="499"/>
+            <point key="canvasLocation" x="1908.6956521739132" y="498.88392857142856"/>
         </scene>
         <!--Detail-->
         <scene sceneID="w05-Sw-ApE">
@@ -97,7 +140,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZz-Db-G1f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZz-Db-G1f">
                                 <rect key="frame" x="20" y="160" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -149,6 +192,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="utl-4G-aou">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -161,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Kevin Jonathan" width="959" height="959"/>
         <image name="algebra" width="512" height="512"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
