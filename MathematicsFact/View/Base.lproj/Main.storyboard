@@ -175,6 +175,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="dfm-WJ-7HE">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.slash.minus" catalog="system" id="Lrp-hs-whZ">
+                            <color key="tintColor" systemColor="systemBlueColor"/>
                             <connections>
                                 <action selector="scaleTextOnClick:" destination="uxn-EN-e9O" id="Mfb-oF-yp7"/>
                             </connections>
@@ -182,6 +183,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descType" destination="1GR-Vi-OHj" id="gw7-ul-4yU"/>
+                        <outlet property="magnifyButton" destination="Lrp-hs-whZ" id="79A-Fe-EXW"/>
                         <outlet property="nameType" destination="lZz-Db-G1f" id="nxZ-HR-dWn"/>
                         <outlet property="photoType" destination="Je1-Dy-FdN" id="MiS-tU-lsF"/>
                     </connections>
@@ -219,6 +221,9 @@
         <image name="plus.slash.minus" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
