@@ -23,6 +23,13 @@ class DetailViewController: ViewController {
         nameType.text = name
         photoType.image = photo
         descType.text = desc
-        
     }
+    @IBAction func scaleTextOnClick(_ sender: Any) {
+        if(descType.font.pointSize == 15) {
+            descType.font = descType.font.withSize(17)
+        } else {
+            descType.font = descType.font.withSize(15)
+        }
+    }
+    
 }

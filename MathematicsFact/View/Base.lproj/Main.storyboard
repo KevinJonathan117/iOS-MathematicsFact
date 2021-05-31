@@ -173,7 +173,13 @@
                             <constraint firstItem="Je1-Dy-FdN" firstAttribute="top" secondItem="lZz-Db-G1f" secondAttribute="bottom" constant="20" id="rl6-Yu-i3V"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="dfm-WJ-7HE"/>
+                    <navigationItem key="navigationItem" title="Detail" id="dfm-WJ-7HE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.slash.minus" catalog="system" id="Lrp-hs-whZ">
+                            <connections>
+                                <action selector="scaleTextOnClick:" destination="uxn-EN-e9O" id="Mfb-oF-yp7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descType" destination="1GR-Vi-OHj" id="gw7-ul-4yU"/>
                         <outlet property="nameType" destination="lZz-Db-G1f" id="nxZ-HR-dWn"/>
@@ -210,6 +216,7 @@
         <image name="Kevin Jonathan" width="959" height="959"/>
         <image name="algebra" width="512" height="512"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.slash.minus" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
